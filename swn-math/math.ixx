@@ -8,5 +8,11 @@ export namespace swn {
 		/// @param value 絶対値を求めたい値
 		/// @return 絶対値
 		static constexpr float Abs(float value) noexcept { return (value < 0.0f) ? -value : value; }
+
+		/// @brief 2つの値のうち大きい方を返す
+		/// @param value1 評価する値1
+		/// @param value2 評価する値2
+		/// @return 大きい方の値
+		static constexpr float max(float value1, float value2) noexcept { return (value1 > value2) ? value1 : value2; }
 	};
 }
