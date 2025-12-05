@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="swn-math/swn-math.vcxproj" />
+  <Project Path="swn-math/swn-math.vcxproj" Id="6137fe83-e1ba-4399-90d9-5509d11e5d9a" />
 </Solution>

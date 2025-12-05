@@ -3,8 +3,10 @@
 #include <iostream>
 
 int main() {
-	float value = -42.5f;
-	float result = swn::Mathf::Abs(value);
-	std::cout << "The absolute value of " << value << " is " << result << std::endl;
+	float value1 = -42.5f;
+	float value2 = 27.3f;
+
+	float result = swn::Mathf::max(value1, value2);
+	std::cout << "result: " << result << std::endl;
 	return 0;
 }
