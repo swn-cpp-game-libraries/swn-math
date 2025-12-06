@@ -64,5 +64,10 @@ export namespace swn {
 		/// @param length 繰り返す長さ
 		/// @return 繰り返された値
 		static constexpr float repeat(float value, float length) noexcept { return value - Mathf::floor(value / length) * length; }
+
+		/// @brief 値の符号を返す
+		/// @param value 符号を求めたい値
+		/// @return 符号（正の値なら1、負の値なら-1、ゼロなら0）
+		static constexpr float sign(float value) noexcept { return (value > 0.0f) ? 1.0f : (value < 0.0f) ? -1.0f : 0.0f; }
 	};
 }
