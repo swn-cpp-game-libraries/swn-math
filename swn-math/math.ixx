@@ -16,6 +16,11 @@ export namespace swn {
 		/// @return クランプされた値
 		static constexpr float clamp(float value, float min, float max) noexcept { return (value < min) ? min : (value > max) ? max : value; }
 
+		/// @brief 小数点以下を切り捨てた値を返す
+		/// @param value 切り捨てたい値
+		/// @return 切り捨てられた値
+		static constexpr float floor(float value) noexcept { return static_cast<float>(static_cast<int>(value) - ((value < 0.0f && value != static_cast<int>(value)) ? 1 : 0)); }
+
 		/// @brief 2つの値のうち大きい方を返す
 		/// @param value1 評価する値1
 		/// @param value2 評価する値2
