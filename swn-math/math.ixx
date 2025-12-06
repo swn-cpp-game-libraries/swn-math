@@ -14,5 +14,11 @@ export namespace swn {
 		/// @param value2 評価する値2
 		/// @return 大きい方の値
 		static constexpr float max(float value1, float value2) noexcept { return (value1 > value2) ? value1 : value2; }
+
+		/// @brief 2つの値のうち小さい方を返す
+		/// @param value1 評価する値1
+		/// @param value2 評価する値2
+		/// @return 小さい方の値
+		static constexpr float min(float value1, float value2) noexcept { return (value1 < value2) ? value1 : value2; }
 	};
 }
