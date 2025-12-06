@@ -8,6 +8,10 @@ export namespace swn {
 	/// @brief 数学関数を提供するクラス
 	class Mathf {
 	public:
+		/// @brief 円周率の定数
+		static constexpr float PI = 3.14159265358979323846f;
+
+	public:
 		/// @brief 絶対値を返す
 		/// @param value 絶対値を求めたい値
 		/// @return 絶対値
