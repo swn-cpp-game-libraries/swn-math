@@ -9,6 +9,13 @@ export namespace swn {
 		/// @return 絶対値
 		static constexpr float Abs(float value) noexcept { return (value < 0.0f) ? -value : value; }
 
+		/// @brief 指定した範囲に値をクランプする
+		/// @param value クランプしたい値
+		/// @param min 最小値
+		/// @param max 最大値
+		/// @return クランプされた値
+		static constexpr float clamp(float value, float min, float max) noexcept { return (value < min) ? min : (value > max) ? max : value; }
+
 		/// @brief 2つの値のうち大きい方を返す
 		/// @param value1 評価する値1
 		/// @param value2 評価する値2
