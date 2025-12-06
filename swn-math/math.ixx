@@ -1,4 +1,8 @@
-﻿export module swn.math;
+﻿module;
+
+#include <cmath>
+
+export module swn.math;
 
 export namespace swn {
 	/// @brief 数学関数を提供するクラス
@@ -32,6 +36,23 @@ export namespace swn {
 		/// @param value2 評価する値2
 		/// @return 小さい方の値
 		static constexpr float min(float value1, float value2) noexcept { return (value1 < value2) ? value1 : value2; }
+
+		/// @brief 累乗を計算する（二乗算法による高速実装）
+		/// @param base 基数
+		/// @param exponent 指数（整数）
+		/// @return base の exponent 乗
+		static constexpr float pow(float base, int exponent) noexcept {
+			if (exponent == 0) return 1.0f;
+			bool negative = exponent < 0;
+			if (negative) exponent = -exponent;
+			float result = 1.0f;
+			while (exponent > 0) {
+				if (exponent & 1) result *= base;
+				base *= base;
+				exponent >>= 1;
+			}
+			return negative ? 1.0f / result : result;
+		}
 
 		/// @brief 指定した長さで値を繰り返す
 		/// @param value 繰り返したい値

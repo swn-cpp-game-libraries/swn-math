@@ -3,16 +3,14 @@
 #include <iostream>
 
 int main() {
-	float start = -10.0f;
-	float end = 10.0f;
-
-	float min = -5.0f;
-	float max = 5.0f;
-
-	for (float cnt = start; cnt <= end; cnt += 1.0f) {
-		float result = swn::Mathf::repeat(cnt, 3.0f);
-		std::cout << "result: " << result << std::endl;
-	}
+	std::cout << "=== swn::Mathf::pow test ===" << std::endl;
+	
+	// テストケース
+	std::cout << "pow(2, 3) = " << swn::Mathf::pow(2.0f, 3) << " (expected: 8)" << std::endl;
+	std::cout << "pow(2, 10) = " << swn::Mathf::pow(2.0f, 10) << " (expected: 1024)" << std::endl;
+	std::cout << "pow(3, 4) = " << swn::Mathf::pow(3.0f, 4) << " (expected: 81)" << std::endl;
+	std::cout << "pow(2, -3) = " << swn::Mathf::pow(2.0f, -3) << " (expected: 0.125)" << std::endl;
+	std::cout << "pow(5, 0) = " << swn::Mathf::pow(5.0f, 0) << " (expected: 1)" << std::endl;
 
 	return 0;
 }
