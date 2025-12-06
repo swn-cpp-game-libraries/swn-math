@@ -9,11 +9,9 @@ int main() {
 	float min = -5.0f;
 	float max = 5.0f;
 
-	for (float cnt = start; cnt <= end; cnt += 0.1f) {
-		float result1 = swn::Mathf::clamp(cnt, min, max);
-		float result2 = swn::Mathf::floor(cnt);
-		std::cout << "result1: " << result1 << "\t|\t";
-		std::cout << "result2: " << result2 << std::endl;
+	for (float cnt = start; cnt <= end; cnt += 1.0f) {
+		float result = swn::Mathf::repeat(cnt, 3.0f);
+		std::cout << "result: " << result << std::endl;
 	}
 
 	return 0;

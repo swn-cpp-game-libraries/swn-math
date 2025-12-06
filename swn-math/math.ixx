@@ -32,5 +32,11 @@ export namespace swn {
 		/// @param value2 評価する値2
 		/// @return 小さい方の値
 		static constexpr float min(float value1, float value2) noexcept { return (value1 < value2) ? value1 : value2; }
+
+		/// @brief 指定した長さで値を繰り返す
+		/// @param value 繰り返したい値
+		/// @param length 繰り返す長さ
+		/// @return 繰り返された値
+		static constexpr float repeat(float value, float length) noexcept { return value - Mathf::floor(value / length) * length; }
 	};
 }
