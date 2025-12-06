@@ -1,8 +1,4 @@
-﻿module;
-
-#include <cmath>
-
-export module swn.math;
+﻿export module swn.math;
 
 export namespace swn {
 	/// @brief 数学関数を提供するクラス
@@ -10,6 +6,9 @@ export namespace swn {
 	public:
 		/// @brief 円周率の定数
 		static constexpr float PI = 3.14159265358979323846f;
+
+		/// @brief ラジアンから度への変換定数
+		static constexpr float DEG2RAD = PI / 180.0f;
 
 		/// @brief 度からラジアンへの変換定数
 		static constexpr float RAD2DEG = 180.0f / PI;
