@@ -11,6 +11,9 @@ export namespace swn {
 		/// @brief 円周率の定数
 		static constexpr float PI = 3.14159265358979323846f;
 
+		/// @brief 度からラジアンへの変換定数
+		static constexpr float RAD2DEG = 180.0f / PI;
+
 	public:
 		/// @brief 絶対値を返す
 		/// @param value 絶対値を求めたい値
