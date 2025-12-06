@@ -3,10 +3,16 @@
 #include <iostream>
 
 int main() {
-	float value1 = -42.5f;
-	float value2 = 27.3f;
+	float start = -10.0f;
+	float end = 10.0f;
 
-	float result = swn::Mathf::max(value1, value2);
-	std::cout << "result: " << result << std::endl;
+	float min = -5.0f;
+	float max = 5.0f;
+
+	for (float cnt = start; cnt <= end; cnt += 1.0f) {
+		float result = swn::Mathf::min(cnt, min);
+		std::cout << "result: " << result << std::endl;
+	}
+
 	return 0;
 }
