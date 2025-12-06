@@ -20,6 +20,11 @@ export namespace swn {
 		/// @return クランプされた値
 		static constexpr float clamp(float value, float min, float max) noexcept { return (value < min) ? min : (value > max) ? max : value; }
 
+		/// @brief 0から1の範囲に値をクランプする
+		/// @param value クランプしたい値
+		/// @return クランプされた値
+		static constexpr float clamp01(float value) noexcept { return (value < 0.0f) ? 0.0f : (value > 1.0f) ? 1.0f : value; }
+
 		/// @brief 小数点以下を切り捨てた値を返す
 		/// @param value 切り捨てたい値
 		/// @return 切り捨てられた値
