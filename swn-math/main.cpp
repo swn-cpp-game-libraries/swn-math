@@ -10,7 +10,7 @@ int main() {
 	float max = 5.0f;
 
 	for (float cnt = start; cnt <= end; cnt += 1.0f) {
-		float result = swn::Mathf::min(cnt, min);
+		float result = swn::Mathf::clamp(cnt, min, max);
 		std::cout << "result: " << result << std::endl;
 	}
 
