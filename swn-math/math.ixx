@@ -20,7 +20,7 @@ export namespace swn {
 		/// @brief 絶対値を返す
 		/// @param value 絶対値を求めたい値
 		/// @return 絶対値
-		static constexpr float Abs(float value) noexcept { return (value < 0.0f) ? -value : value; }
+		static constexpr float abs(float value) noexcept { return (value < 0.0f) ? -value : value; }
 
 		/// @brief 指定した範囲に値をクランプする
 		/// @param value クランプしたい値
@@ -51,7 +51,7 @@ export namespace swn {
 		/// @return 小さい方の値
 		static constexpr float min(float value1, float value2) noexcept { return (value1 < value2) ? value1 : value2; }
 
-		/// @brief 累乗を計算する（二乗算法による高速実装）
+		/// @brief 累乗を計算する
 		/// @param base 基数
 		/// @param exponent 指数（整数）
 		/// @return base の exponent 乗
