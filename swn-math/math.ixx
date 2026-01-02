@@ -1,5 +1,8 @@
 ﻿export module swn.math;
 
+import <cmath>;
+import <limits>;
+
 export namespace swn {
 	/// @brief 数学関数を提供するクラス
 	class Mathf {
@@ -69,7 +72,13 @@ export namespace swn {
 		/// @param value 繰り返したい値
 		/// @param length 繰り返す長さ
 		/// @return 繰り返された値
-		static constexpr float repeat(float value, float length) noexcept { return value - Mathf::floor(value / length) * length; }
+		static float repeat(float value, float length) noexcept {
+			float result = std::fmod(value, length);
+			if (result < 0.0f) result += length;
+			float eps = std::numeric_limits<float>::epsilon() * std::fabs(length) * 4.0f;
+			if (result + eps >= length) result = 0.0f;
+			return result;
+		}
 
 		/// @brief 値の符号を返す
 		/// @param value 符号を求めたい値
